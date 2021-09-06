@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope";
+  font-size: 1.8rem;
+  background-color: hsl(210, 46%, 95%);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+}
+
+.card_img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card_content {
+  padding: 3rem 0 0 0;
+}
+
+.header {
+  padding: 0 2rem;
+}
+
+.header h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.header p {
+  line-height: 1.6;
+  color: hsl(214, 17%, 51%);
+  margin-bottom: 4rem;
+}
+
+.profile {
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+}
+
+.avater {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  justify-self: start;
+}
+
+.profile span {
+  align-self: center;
+}
+
+.share {
+  width: 40px;
+  height: 40px;
+  background: hsl(210, 46%, 95%);
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  z-index: 1;
+}
+
+.share.active {
+  background: hsl(214, 17%, 51%);
+}
+
+.share_img.active {
+  filter: brightness(0) invert(1);
+}
+
+.social {
+  width: 100%;
+  padding: 3rem 2rem;
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  bottom: 1px;
+}
+
+@media screen and (max-width: 320px) {
+  .social {
+    padding: 4rem 2rem;
+  }
+}
+
+.social p {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: hsl(212, 23%, 69%);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+
+  .card {
+    grid-template-columns: 40% 60%;
+  }
+
+  .card_img {
+    height: 100%;
+  }
+
+  .header {
+    padding: 0 3rem;
+  }
+
+  .social {
+    padding: 1rem 2rem 2.5rem 2rem;
+    width: 30%;
+    right: 0;
+    transform: translateX(35%);
+    bottom: 70px;
+    border-radius: 10px;
+    justify-content: center;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      55% 75%,
+      50% 100%,
+      45% 75%,
+      0% 75%
+    );
+  }
+
+  @media screen and (min-width: 1440px) {
+    .container {
+      width: 60%;
+    }
+  }
+}
